@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <title>{%block title%}{%endblock%} - Duncan Witter</title>
+        {% endblock %}
+        <link rel="stylesheet" href="{{url_for('static', filename='base.css')}}"/>
+    </head>
+    <body>
+        <div id="header">
+            <div id="Banner"></div>
+            <div id="nav">
+                <ul >
+                    <li ><a href="/home">Home</a></li>
+                    <li ><a href="">About</a></li>
+                    <li ><a href="">Projects</a></li>
+                    <li ><a href="">Socials</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            {%block content%} {%endblock%}
+        </div>
+    </body>
+</html>
